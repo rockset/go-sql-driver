@@ -36,6 +36,8 @@ FROM
 )
 
 func TestDriver(t *testing.T) {
+	SkipUnlessEnv(t, "ROCKSET_APIKEY")
+
 	ctx := context.TODO()
 	ds := fmt.Sprintf("rockset://%s@%s", os.Getenv("ROCKSET_APIKEY"), os.Getenv("ROCKSET_APISERVER"))
 	db, err := sql.Open("rockset", ds)

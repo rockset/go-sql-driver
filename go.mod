@@ -1,9 +1,9 @@
 module github.com/rockset/go-sql-driver
 
-go 1.20
+go 1.21
 
 require (
-	github.com/rockset/rockset-go-client v0.16.0
+	github.com/rockset/rockset-go-client v0.22.3
 	github.com/stretchr/testify v1.8.2
 )
 
